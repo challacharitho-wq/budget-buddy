@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Buddy</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <h2>💰 Budget Buddy</h2>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Dashboard</a>
+      <a href="#">Reports</a>
+      <a href="#">Profile</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="header">
+      <h1>Your Smart Finance Tracker</h1>
+      <p>Track. Analyze. Grow. — manage your money effortlessly.</p>
+    </div>
+
+    <div class="stats">
+      <div class="card balance">
+        <h2>Balance</h2>
+        <p id="balance">₹0.00</p>
+      </div>
+      <div class="card income">
+        <h2>Income</h2>
+        <p id="income">₹0.00</p>
+      </div>
+      <div class="card expense">
+        <h2>Expenses</h2>
+        <p id="expenses">₹0.00</p>
+      </div>
+    </div>
+
+    <form id="transaction-form">
+      <h3>Add Transaction</h3>
+      <input id="desc" type="text" placeholder="Description" required />
+      <input id="amount" type="number" placeholder="Amount" required />
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <select id="category">
+        <option>Food</option>
+        <option>Rent</option>
+        <option>Shopping</option>
+        <option>Travel</option>
+      </select>
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <div class="transactions">
+      <h3>Recent Transactions</h3>
+      <div id="transaction-list"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
